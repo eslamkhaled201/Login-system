@@ -75,7 +75,7 @@ if (window.location == `${URLOrigin}/sign%20up.html`) {
 }
 
 // check if current page url is at sign up page to get sign up button
-if (window.location == `${URLOrigin}/index.html`) {
+if (window.location == `${URLOrigin}/`) {
     $(signInBtn).click(function (e) {
         e.preventDefault();
         let password = $(passwordInput).val();
