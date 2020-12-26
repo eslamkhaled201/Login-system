@@ -53,15 +53,13 @@ let isValidEmailAndPass = () => {
         return false;
     }
 };
-console.log(location);
-console.log(`${URLOrigin}`);
+
+
 // check if current page url is at sign up page to get sign up button
 if (window.location == `${URLOrigin}docs/sign%20up.html`) {
     /** execute sign Up process */
-    console.log("at sign up");
     $(signUpBtn).click(function (e) {
         e.preventDefault();
-        console.log(location);
         let name = $(userNameInput).val();
         let password = $(passwordInput).val();
         let email = $(emailInput).val();
