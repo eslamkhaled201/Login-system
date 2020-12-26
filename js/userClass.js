@@ -1,3 +1,5 @@
+import { users } from "./main.js";
+import { URLOrigin } from "./variables.js";
 class User {
     currentUser = null;
 
@@ -12,7 +14,7 @@ class User {
                 alert("You already have an account");
                 return true;
             } else if (pass == users[i].password) {
-                alert("Enter differrnt password");
+                alert("Enter different password");
                 return true;
             } else {
                 return false;

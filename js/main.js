@@ -1,6 +1,6 @@
 import User from './userClass.js';
 import { emailInput, passwordInput, userNameInput, signUpBtn, signInBtn, URLOrigin } from './variables.js';
-let users;
+export let users;
 
 let user = new User();// create new user instance from User class
 // getting data from local storage
@@ -25,7 +25,7 @@ if (user.currentUser != null) {
 
 // dynamic function checks any input value takes required pattern , input and unvalid message  
 let IsValidInput = (Pattern, inputElement) => {
-    if (Pattern.test(inputElement.value)) {
+    if (Pattern.test($(inputElement).val())) {
         $(inputElement).removeClass("unvalidinput");
         $('.req-patten-box').addClass('d-none');
         return true;
