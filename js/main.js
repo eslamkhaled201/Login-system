@@ -1,5 +1,5 @@
 import User from './userClass.js';
-import {emailInput,passwordInput,userNameInput,signUpBtn , signInBtn , URLOrigin} from './variables.js';
+import { emailInput, passwordInput, userNameInput, signUpBtn, signInBtn, URLOrigin } from './variables.js';
 let users;
 
 let user = new User();// create new user instance from User class
@@ -58,6 +58,8 @@ let isValidEmailAndPass = () => {
 
 // check if current page url is at sign up page to get sign up button
 if (window.location == `${URLOrigin}/sign%20up.html`) {
+    console.log(location.href);
+    console.log(URLOrigin);
     /** execute sign Up process */
     $(signUpBtn).click(function (e) {
         e.preventDefault();
@@ -76,16 +78,16 @@ if (window.location == `${URLOrigin}/sign%20up.html`) {
 }
 
 // check if current page url is at sign up page to get sign up button
-if (window.location == `${URLOrigin}/`) {
+if (window.location == `${URLOrigin}`) {
     $(signInBtn).click(function (e) {
         e.preventDefault();
-        let password = $(passwordInput).val();
+        /*let password = $(passwordInput).val();
         let email = $(emailInput).val();
         if (isValidEmailAndPass()) {
             user.signIn(email, password);
         }else{
             $('.alert-box').text("Wrong password or email").addClass("text-danger");
-        }
+        }*/
     })
 }
 
