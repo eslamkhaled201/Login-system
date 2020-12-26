@@ -18,8 +18,8 @@ if (localStorage.getItem("Users") == null) {
 }
 
 if (user.currentUser != null) {
-    if (location != `${URLOrigin}/Home.html`) {
-        window.location = `${URLOrigin}/Home.html`;
+    if (location != `${URLOrigin}docs/Home.html`) {
+        window.location = `${URLOrigin}docs/Home.html`;
     }
 }
 
@@ -55,7 +55,7 @@ let isValidEmailAndPass = () => {
 };
 
 // check if current page url is at sign up page to get sign up button
-if (window.location == `${URLOrigin}/sign%20up.html`) {
+if (window.location == `${URLOrigin}docs/sign%20up.html`) {
     /** execute sign Up process */
     $(signUpBtn).click(function (e) {
         e.preventDefault();
