@@ -36,8 +36,6 @@ let IsValidInput = (Pattern, inputElement) => {
     }
 }
 
-console.log(location);
-console.log(URLOrigin);
 // function to check if password and email input will match the required pattern or not 
 let isValidEmailAndPass = () => {
     /** email rgx means start with 
@@ -77,20 +75,19 @@ if (window.location == `${URLOrigin}/sign%20up.html`) {
 
 // check if current page url is at sign up page to get sign up button
 if (window.location == `${URLOrigin}`) {
-    console.log(URLOrigin);
     $(signInBtn).click(function (e) {
         e.preventDefault();
-        /*let password = $(passwordInput).val();
+        let password = $(passwordInput).val();
         let email = $(emailInput).val();
         if (isValidEmailAndPass()) {
             user.signIn(email, password);
         }else{
             $('.alert-box').text("Wrong password or email").addClass("text-danger");
-        }*/
+        }
     })
 }
 
-if (location == `${URLOrigin}/Home.html`) {
+if (location == `${URLOrigin}docs/Home.html`) {
     $(".userName").text(user.currentUser.name);
     $("#logOutBtn").click(() => {
         user.SignOut();

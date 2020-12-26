@@ -36,7 +36,7 @@ class User {
             users.push(newUser);// add new user to the global users array
             this.saveToLocalStorage();
             // redirect user to sign in page 
-            window.location.replace( `${URLOrigin}/index.html`);
+            window.location.replace( `${URLOrigin}`);
         }
     }
 
@@ -59,7 +59,7 @@ class User {
                 $('.alert-box').text("Success Sign In")
                 .removeClass("text-danger")
                 .addClass("text-success"); //  displar success feedback 
-                window.location.replace(`${URLOrigin}/Home.html`); // redrict user to Home page
+                window.location.replace(`${URLOrigin}docs/Home.html`); // redrict user to Home page
                 break;// stop loop iterations from checking other users and exist from this function 
             } else {
                 // here case that we don't get user with the same entered email and password
@@ -72,7 +72,7 @@ class User {
         this.currentUser.isSignedIn = false;
         this.saveToLocalStorage();
         this.currentUser = null;
-        location.replace(`${URLOrigin}/index.html`);
+        location.replace(`${URLOrigin}`);
     }
 }
 
