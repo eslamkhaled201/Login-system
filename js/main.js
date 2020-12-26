@@ -53,6 +53,7 @@ let isValidEmailAndPass = () => {
         return false;
     }
 };
+console.log(location);
 console.log(`${URLOrigin}`);
 // check if current page url is at sign up page to get sign up button
 if (window.location == `${URLOrigin}docs/sign%20up.html`) {
