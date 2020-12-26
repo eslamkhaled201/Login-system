@@ -36,7 +36,7 @@ let IsValidInput = (Pattern, inputElement) => {
     }
 }
 
-
+console.log(location);
 // function to check if password and email input will match the required pattern or not 
 let isValidEmailAndPass = () => {
     /** email rgx means start with 
