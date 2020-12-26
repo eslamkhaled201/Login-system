@@ -58,8 +58,6 @@ let isValidEmailAndPass = () => {
 
 // check if current page url is at sign up page to get sign up button
 if (window.location == `${URLOrigin}/sign%20up.html`) {
-    console.log(location.href);
-    console.log(URLOrigin);
     /** execute sign Up process */
     $(signUpBtn).click(function (e) {
         e.preventDefault();
@@ -79,6 +77,7 @@ if (window.location == `${URLOrigin}/sign%20up.html`) {
 
 // check if current page url is at sign up page to get sign up button
 if (window.location == `${URLOrigin}`) {
+    console.log(URLOrigin);
     $(signInBtn).click(function (e) {
         e.preventDefault();
         /*let password = $(passwordInput).val();
